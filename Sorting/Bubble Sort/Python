@@ -1,0 +1,17 @@
+arr = [13,46,24,52,20,9]
+n = len(arr)
+print("Before Sorting:")
+for i in range(0,n):
+    print(arr[i])
+    
+for i in range(n):
+    for j in range(0, n-i-1):
+        if arr[j]>arr[j+1]:
+            temp = arr[j]
+            arr[j] = arr[j+1]
+            arr[j+1] = temp
+    
+print("\nAfter Sorting:")
+for i in range(0,n):
+    print(arr[i])
+    
