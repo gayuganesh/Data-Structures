@@ -1,0 +1,32 @@
+import java.util.*; 
+
+public class Main 
+{ 
+    public static void main(String[] args)
+    {
+      int n=10; 
+      int[] arr={10,9,8,7,6,5,4,3,2,1}; 
+      System.out.println("\n Before Sorting: "); 
+      for(int i=0; i<=n-1; i++) 
+      { 
+        System.out.print(arr[i]+" "); 
+      }        
+
+        for(int i=0; i<=n-2; i++) 
+        { 
+          int x = i; 
+          for(int j=i+1; j<=n-1; j++)
+          { 
+            if(arr[j] <= arr[x]) x = j; 
+          }
+          int temp = arr[x];  
+          arr[x] = arr[i];  
+          arr[i] = temp;  
+        } 
+        System.out.println("\n After Sorting: "); 
+        for(int i=0; i<=n-1; i++) 
+        { 
+          System.out.print(arr[i]+" "); 
+        } 
+    } 
+} 
