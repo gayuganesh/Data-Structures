@@ -1,0 +1,21 @@
+arr = [18,108,2,95,22] 
+n = len(arr) 
+
+print("Before Sorting:")
+for i in range(0,n): 
+    print(arr[i]) 
+
+for i in range(0, n-1): 
+    x = i 
+    for j in range(i+1, n): 
+        if arr[j]<=arr[x]: 
+            x = j 
+    temp = arr[x] 
+    arr[x] = arr[i]
+    arr[i] = temp 
+
+print("\nAfter Sorting:") 
+for i in range(0,n): 
+    print(arr[i]) 
+
+ 
